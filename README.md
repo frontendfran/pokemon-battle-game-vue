@@ -1,4 +1,4 @@
-# Project Title
+# Pokemon Battle Game
 
 Pokemon Battle Game!
 
