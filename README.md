@@ -17,3 +17,4 @@ Pokemon Battle Game (name WIP!) is a retro game emulator. Built for fun, I wante
 ### Running the project
 
 * Run `npm run serve` to run the project.
+* Run `npm run lint` for linting.
