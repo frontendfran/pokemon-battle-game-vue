@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="utility__visibly-hidden">
     <form @submit.prevent="submitData">
       <button v-on:click="attackPokemon">ATTACK</button>
       <button v-on:click="healTrainer">POTION</button>
@@ -7,7 +7,7 @@
     </form>
   </section>
 
-  <section id="status" class="container">
+  <section id="status" class="container utility__visibly-hidden">
 
     <div v-for="status in statuses" :key="status">
       <span
