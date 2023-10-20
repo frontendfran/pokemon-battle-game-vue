@@ -9,19 +9,17 @@
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.17.0",
+    "@vue/cli-service": "^5.0.8",
     "core-js": "^3.6.5",
     "postcss": "^8.4.12",
     "vue": "^3.2.31",
     "webpack": "^5.70.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "^5.0.4",
-    "@vue/cli-service": "^5.0.4",
-    "@vue/compiler-sfc": "^3.2.31",
     "babel-eslint": "^10.1.0",
     "eslint": "^8.12.0",
     "eslint-plugin-vue": "^8.5.0",
+    "google-fonts-webpack-plugin": "^0.4.4",
     "node-sass": "^7.0.1",
     "sass-loader": "^12.6.0",
     "vue-loader": "^17.0.0",

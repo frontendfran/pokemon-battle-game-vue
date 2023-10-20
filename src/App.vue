@@ -33,7 +33,7 @@
 <style lang="scss">
   html {
     font-family: sans-serif;
-    // need to make these colours vars
+    // TODO: make these colours vars
     background: rgb(34,193,195);
     background: 
       /* 1 */ radial-gradient(ellipse at center, rgba(255,211,25, 0.2) 0%,rgba(255,211,25, 0) 100%),

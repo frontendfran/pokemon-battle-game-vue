@@ -2,7 +2,7 @@
   <!-- conditionals here for the different screens -->
   <section class="battle" v-if="screen === 'battle'">
     <div class="battle__trainer">
-      <div class="text utility__visibly-hidden">
+      <div class="text">
         <h2>Eevee {{ trainerHealth }}</h2>
       </div>
       <div class="image">
@@ -11,7 +11,7 @@
     </div>
 
     <div class="battle__pokemon">
-      <div class="text utility__visibly-hidden">
+      <div class="text">
         <h2>Pikachu {{ pokemonHealth }}</h2>
       </div>
       <div class="image">
@@ -52,12 +52,16 @@
     &__trainer {
       display: flex;
       justify-content: space-between;
+      font-family: 'DotGothic16';
+      text-transform: uppercase;
     }
 
     &__pokemon {
       display: flex;
       justify-content: space-between;
       direction: rtl;
+      font-family: 'DotGothic16';
+      text-transform: uppercase;
     }
   }
 </style>
