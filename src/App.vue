@@ -58,7 +58,7 @@
       background-image: url("images/gameboy.png");
       background-repeat: no-repeat;
       background-position: center top;
-      background-size: 966px 1444px;
+      background-size: 1000px 1495px;
       height: 100vh;
     }
   }
