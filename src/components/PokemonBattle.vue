@@ -111,6 +111,7 @@
       width: 100%;
 
       &__bar {
+        // TODO: variables!
         background-color: #5fa768;
         border: 1px solid #000000;
         width: 100%;
