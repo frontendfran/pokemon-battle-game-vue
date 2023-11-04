@@ -32,6 +32,7 @@
 
 <style lang="scss">
   html {
+    overflow-y: hidden;
     font-family: sans-serif;
     // TODO: make these colours vars
     background: rgb(34,193,195);

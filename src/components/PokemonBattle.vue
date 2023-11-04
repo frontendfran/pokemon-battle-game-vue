@@ -4,11 +4,11 @@
     <div class="battle__trainer">
       <div class="text">
         <h2>Eevee</h2>
+        <h3>:L6</h3>
         <div class="healthpoints">
-          <div class="healthpoints__value">HP:</div> <div class="healthpoints__bar" v-bind:style="pokemonBarStyles"></div>
+          <div class="healthpoints__value">HP:</div> <div class="healthpoints__bar" v-bind:style="trainerBarStyles"></div>
         </div>
-        <h4>:L6</h4>
-        <h4>{{ trainerHealth }}/ 100</h4>
+        <h3>{{ trainerHealth }}/ 100</h3>
       </div>
       <div>
         <img class="image" alt="Eevee" src="../images/eevee.png">
@@ -21,11 +21,11 @@
       </div>
       <div class="text">
         <h2>Pikachu</h2>
+        <h3>:L7</h3>
         <div class="healthpoints">
           <div class="healthpoints__value">HP:</div> <div class="healthpoints__bar" v-bind:style="pokemonBarStyles"></div>
         </div>
-        <h4>:L7</h4>
-        <h4>{{ pokemonHealth }}/ 100</h4>
+        <h3>{{ pokemonHealth }}/ 100</h3>
       </div>
     </div>
   </section>
@@ -61,6 +61,7 @@
 
         return { width: this.trainerHealth + "%" };
       },
+
       pokemonBarStyles() {
         if (this.pokemonHealth < 0) {
           return { width: "0%" };
@@ -75,18 +76,15 @@
 <style lang="scss">
   .battle {
     padding-top: 180px;
+    font-family: 'DotGothic16', 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-weight: 900;
 
     &__trainer, &__pokemon {
       display: flex;
       justify-content: space-between;
-      font-family: 'DotGothic16';
-      text-transform: uppercase;
       font-size: 20px;
       line-height: 0;
-
-      .text {
-        width: 100%;
-      }
 
       .image {
         width: 150px;
@@ -97,11 +95,52 @@
       .image {
         margin: 0 0 0 50px;
       }
+
+      .text {
+        width: 100%;
+        padding: 0 20px;
+        text-align: center;
+        position: relative;
+
+        &:after {
+          position: absolute;
+          content: "";
+          top: 60px;
+          left: 0;
+          width: 100%;
+          height: 53%;
+          background-repeat: no-repeat;
+          background-position: 100% 100%;
+          background-size: 100%;
+          transform: scaleX(-1);
+          background-image: url("../images/border.png");
+        }
+      }
     }
 
     &__pokemon {
       .image {
         margin: 0 50px 0 0;
+      }
+
+      .text {
+        width: 100%;
+        padding: 0 20px;
+        text-align: center;
+        position: relative;
+
+        &:after {
+          position: absolute;
+          content: "";
+          top: 65px;
+          right: 0;
+          width: 100%;
+          height: 55%;
+          background-repeat: no-repeat;
+          background-position: 100% 100%;
+          background-size: 100%;
+          background-image: url("../images/border.png");
+        }
       }
     }
 
@@ -111,7 +150,6 @@
       width: 100%;
 
       &__bar {
-        // TODO: variables!
         background-color: #5fa768;
         border: 1px solid #000000;
         width: 100%;
