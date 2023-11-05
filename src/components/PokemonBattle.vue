@@ -1,12 +1,15 @@
 <template>
   <!-- conditionals here for the different screens -->
-  <section class="battle" v-if="screen === 'battle'">
+  <section v-if="screen === 'battle'" class="battle">
     <div class="battle__trainer">
       <div class="text">
         <h2>Eevee</h2>
         <h3>:L6</h3>
         <div class="healthpoints">
-          <div class="healthpoints__value">HP:</div> <div class="healthpoints__bar" v-bind:style="trainerBarStyles"></div>
+          <div class="healthpoints__value">HP:</div> 
+          <div v-if="trainerHealth > 70" class="healthpoints__bar green" v-bind:style="trainerBarStyles"></div>
+          <div v-else-if="trainerHealth > 40 && trainerHealth < 69" class="healthpoints__bar orange" v-bind:style="trainerBarStyles"></div>
+          <div v-else-if="trainerHealth < 39" class="healthpoints__bar red" v-bind:style="trainerBarStyles"></div>
         </div>
         <h3>{{ trainerHealth }}/ 100</h3>
       </div>
@@ -150,12 +153,23 @@
       width: 100%;
 
       &__bar {
-        background-color: #5fa768;
         border: 1px solid #000000;
         width: 100%;
         height: 100%;
         box-shadow: 2px 2px rgb(31, 8, 0);
         height: 10px;
+      }
+
+      .green {
+        background-color: #5fa768;
+      }
+
+      .orange {
+        background-color: orange;
+      }
+
+      .red {
+        background-color: red;
       }
 
       &__value {
