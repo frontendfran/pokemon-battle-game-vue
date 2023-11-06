@@ -26,7 +26,10 @@
         <h2>Pikachu</h2>
         <h3>:L7</h3>
         <div class="healthpoints">
-          <div class="healthpoints__value">HP:</div> <div class="healthpoints__bar" v-bind:style="pokemonBarStyles"></div>
+          <div class="healthpoints__value">HP:</div> 
+          <div v-if="pokemonHealth > 70" class="healthpoints__bar green" v-bind:style="pokemonBarStyles"></div>
+          <div v-else-if="pokemonHealth > 40 && pokemonHealth < 69" class="healthpoints__bar orange" v-bind:style="pokemonBarStyles"></div>
+          <div v-else-if="pokemonHealth < 39" class="healthpoints__bar red" v-bind:style="pokemonBarStyles"></div>
         </div>
         <h3>{{ pokemonHealth }}/ 100</h3>
       </div>
