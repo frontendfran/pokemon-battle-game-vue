@@ -80,6 +80,10 @@
 </script>
 
 <style lang="scss">
+  $color-green: #5fa768;
+  $color-orange: #e9bf1b;
+  $color-red: #d8634b;
+
   .battle {
     padding-top: 180px;
     font-family: 'DotGothic16', 'Times New Roman', Times, serif;
@@ -164,15 +168,15 @@
       }
 
       .green {
-        background-color: #5fa768;
+        background-color: $color-green;
       }
 
       .orange {
-        background-color: orange;
+        background-color: $color-orange;
       }
 
       .red {
-        background-color: red;
+        background-color: $color-red;
       }
 
       &__value {
